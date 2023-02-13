@@ -8,9 +8,8 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <h1>Heading</h1><hr>
-    <a href="{% url 'createProject' %}" style="background-color: red;">Create</a>
+    <img src= "{% static 'images/default.jpeg' %}" style="border-radius: 50%; width: 2%;">
+    <a href="{% url 'createProject' %}" >Create</a>
     <hr>
     <br>
     {% block body %}{% endblock %}
