@@ -1,0 +1,28 @@
+{% extends 'navbar.html' %}
+
+{% block body %}
+     <table>
+        <tr>
+            <th>Project Id</th>
+            <th>Project Title</th>
+            <th>Project Votes</th>
+            <th>Project Ratio</th>
+            <th>Link</th>
+        </tr>
+        {% for project in projects %}
+        <tr>
+            <td>{{project.id}}</td>
+            <td>{{project.title}}</td>
+            <td>{{project.vote_total}}</td>
+            <td>{{project.vote_ratio}}</td>
+            <td><a href="{% url 'updateProject' project.id %}">Edit</a></td>
+            <td><a href="{% url 'products' project.id %}">View</a></td>
+            <td><a href="{% url 'deleteProject' project.id %}">Delete</a></td>
+           
+        </tr>
+        {% endfor %}
+
+    </table>
+{% endblock %}
+
+

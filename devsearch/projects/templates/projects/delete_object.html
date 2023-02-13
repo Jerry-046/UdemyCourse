@@ -1,0 +1,12 @@
+{% extends 'navbar.html' %}
+
+
+{% block body %}
+<form action="" method="POST">
+    {% csrf_token %}
+    <p> Are you sure you want to delete "{{obj}}</object></p>
+    <button><a href="{% url 'product' %}"> Back</a></button>
+    <input type="submit" value="Confirm">
+</form>
+{% endblock  %}
+    

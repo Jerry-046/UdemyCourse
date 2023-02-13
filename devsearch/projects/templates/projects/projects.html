@@ -1,0 +1,11 @@
+{% extends 'navbar.html' %} 
+{% block body %}
+    <h1>{{a.title}}</h1>
+    <hr>
+    {% for tag in tags%}
+        <span style="border:1px solid; ">{{tag}}</span>
+    {% endfor %}
+    <hr>
+    <h1>Description</h1>
+    <p>{{a.description}}</p>
+{% endblock %}

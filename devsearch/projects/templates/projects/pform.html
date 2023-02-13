@@ -1,0 +1,10 @@
+{% extends 'navbar.html' %}
+
+{% block body %}
+<h1 style="background: rebeccapurple;width: fit-content;">Project Form</h1>
+<form action="" method="POST" >
+    {% csrf_token %}
+    <div style="align-items: center;">{{form.as_p}}</div>
+    <input type="submit">
+</form>
+{% endblock %}
