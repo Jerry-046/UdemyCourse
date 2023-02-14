@@ -3,7 +3,7 @@
 {% block body %}
 <body style="background-color: rgb(68, 68, 68);">
 <h1 style="width: fit-content;">Project Form</h1>
-<form action="" method="POST" style="width: fit-content; position: relative; left: 30%; font-size: large;" >
+<form action="" method="POST" enctype="multipart/form-data" style="width: fit-content; position: relative; left: 30%; font-size: large;" >
     {% csrf_token %}
     <div style="background: rebeccapurple; padding: 5%; margin: 2%;">
     {{form.as_p}}
