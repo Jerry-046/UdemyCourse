@@ -1,28 +1,17 @@
 {% extends 'navbar.html' %}
 
 {% block body %}
-     <table>
-        <tr>
-            <th>Project Id</th>
-            <th>Project Title</th>
-            <th>Project Votes</th>
-            <th>Project Ratio</th>
-            <th>Link</th>
-        </tr>
-        {% for project in projects %}
-        <tr>
-            <td>{{project.id}}</td>
-            <td>{{project.title}}</td>
-            <td>{{project.vote_total}}</td>
-            <td>{{project.vote_ratio}}</td>
-            <td><a href="{% url 'updateProject' project.id %}">Edit</a></td>
-            <td><a href="{% url 'products' project.id %}">View</a></td>
-            <td><a href="{% url 'deleteProject' project.id %}">Delete</a></td>
-           
-        </tr>
+    <div class="card">
+        {% for a in projects %}
+        <div class="container" style="display: inline-block;margin: 1%; padding: 1%; border: 3px rgb(68, 68, 68) solid; border-radius: 5%;">
+            <img src="{{a.f_image.url}}" style="width: 10em; height: 10em;">
+            <p>{{a.title}}</p>
+            <td><a href="{% url 'updateProject' a.id %}">Edit</a></td>
+            <td><a href="{% url 'products' a.id %}">View</a></td>
+            <td><a href="{% url 'deleteProject' a.id %}">Delete</a></td>
+        </div>
         {% endfor %}
-
-    </table>
+      </div>
 {% endblock %}
 
 
