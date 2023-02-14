@@ -8,10 +8,11 @@
     <title>Document</title>
 </head>
 <body>
-    <img src= "{% static 'images/default.jpeg' %}" style="border-radius: 50%; width: 2%;">
-    <a href="{% url 'createProject' %}" >Create</a>
-    <hr>
-    <br>
+    <div class="flex" style="background: aquamarine; display:flex;">
+    <img src= "{% static 'images/default.jpeg' %}" style="border-radius: 50%; width: 3%; padding: 0.2%;">
+    <a href="{% url 'createProject' %}" style="text-decoration: none; font-size: large; padding: 1%;">Create</a>
+    <a href="{% url 'product' %}" style="text-decoration: none; font-size: large; padding: 1%;">List</a>
+    </div>
     {% block body %}{% endblock %}
 </body>
 </html>
